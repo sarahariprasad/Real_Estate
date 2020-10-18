@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<style>
+  .card-body{
+   padding: 0;
+  }
+
+
+
+
+</style>
+<section>
+    <style>
+     #buyers{
+
+  letter-spacing: 1px;
+  }
+
+
+
+
+    </style>
+    <div class="container">
+        <div class="row mx-auto" id="buyers">
+            <div class="col">
+                <center>
+                    <h2 class="text-uppercase mt-3 font-weight-bold text-dark"><strong>REVIEWS</strong></h2>
+                </center>
+
+                <br>
+
+                <div class="row mx-auto">
+                    <div class="col mx-auto">
+
+                        {% for review in rev %}
+
+                        <div class="card card-1" style="padding:20px">
+                            <div class="row">
+                                <div class="col-md-1  mx-auto">
+                                    <i class="fa fa-user fa-5x" aria-hidden="true" style="color:#0d47a1;"></i>
+                                </div>
+                                <br>
+                                <div class="col-md-11 mx-auto">
+                                    <h5 class="card-title"><b>{{review.name}}</b></h5>
+                                    <div class="card-body" style="float:initial">{{review.text}}
+                                        <br>
+                                        <div class="card-text" style="float: right;">{{review.date}}
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <br>
+
+                        {% endfor %}
+                    </div>
+
+                </div>
+                <br>
+                <div class="col mx-auto">
+                    <center>
+                        <h2 class="text-uppercase mt-3 font-weight-bold text-dark"><strong>VIDEOS</strong></h2>
+                    </center>
+                    <div class="row mx-auto">
+                        <div class="col mx-auto">
+
+                            <video width="335" height="300" controls>
+                                <source src="../../media/property/video_1.mp4" type="video/mp4">
+                                <source src="../../media/property/video_1.ogg" type="video/ogg">
+                                Your browser does not support the video tag.
+                            </video>
+
+                            <video width="335" height="300" controls>
+                                <source src="../../media/property/video_2.mp4" type="video/mp4">
+                                <source src="../../media/property/video_2.ogg" type="video/ogg">
+                                Your browser does not support the video tag.
+                            </video>
+
+                            <video width="335" height="300" controls>
+                                <source src="../../media/property/video_3.mp4" type="video/mp4">
+                                <source src="../../media/property/video_3.ogg" type="video/ogg">
+                                Your browser does not support the video tag.
+                            </video>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+{% endblock body %}
