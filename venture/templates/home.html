@@ -1,7 +1,6 @@
 
 {% extends 'base.html' %}
-  <title>Home</title>
-    <meta name="description" content="Check our property listings with more details here">
+
 {% block body %}
 <style>
   /* Make the image fully responsive */
@@ -12,6 +11,8 @@
 
 
   </style>
+ <title>Home</title>
+    <meta name="description" content="Check our property listings with more details here">
 
 <body>
 
@@ -78,6 +79,7 @@
 
 
 
+
                 {% if property.availability %}
 
                            <h2 class="Car">  For Sale</h2>
@@ -89,8 +91,11 @@
                 {% endif %}
 
                 <br>
+
+               <p class="card-text">  <i class="fa fa-map-marker-alt mt-6 fa-x"></i><b> {{property.location}} </b></p>
+                <br>
 </h5>
-                 <p class="card-text"></p>
+
 
                 <a href="{% url 'venture:property_detail' property.id %}" class="button text-light"><span> Details </span></a>
             </div>
